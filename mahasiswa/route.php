@@ -21,7 +21,10 @@ require_once "Administrasi.php";
     case 'detail-dosen';
 require_once "detail-dosen.php";
         break;
-
+    
+    case 'logout';
+require_once "logout.php";
+        break;
 
 
 
@@ -49,6 +52,6 @@ require_once "hapus-mhs.php";
 
 
     default:
-require_once "Dashboard.php";
+require_once "dashboard.php";
     break;
 }

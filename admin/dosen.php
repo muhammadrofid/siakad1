@@ -15,17 +15,17 @@ if (isset($_POST["tombolcari"])) {
         if ($category == "matkul") {
             // Konversi kode prodi ke angka
             if (strtoupper($keyword) == "Pemrograman Web") {
-                $prodi = 1;
+                $matkul = 1;
             } elseif (strtoupper($keyword) == "PBO") {
-                $prodi = 2;
+                $matkul = 2;
             } elseif (strtoupper($keyword) == "PBP") {
-                $prodi = 3;
+                $matkul = 3;
             } else {
-                $prodi = 0; // Jika tidak ditemukan
+                $matkul = 0; // Jika tidak ditemukan
             }
-            $sql = "SELECT * FROM mhs WHERE $category = '$prodi'";
+            $sql = "SELECT * FROM dosen WHERE $category = '$matkul'";
         } else {
-            $sql = "SELECT * FROM mhs WHERE $category LIKE '%$keyword%'";
+            $sql = "SELECT * FROM dosen WHERE $category LIKE '%$keyword%'";
         }
     }
 }
@@ -69,7 +69,7 @@ $hasil = $db->query($sql);
                                         <table>
                                             <tr>
                                                 <td>
-                                                    <a href="./?p=add-mhs" class="btn btn-primary" style="width: 80px">+ Add</a>
+                                                    <a href="./?p=add-dosen" class="btn btn-primary" style="width: 80px">+ Add</a>
                                                 </td>
                                                 <td width="10"></td>
                                                 <td>
@@ -121,7 +121,7 @@ $hasil = $db->query($sql);
                                             } elseif ($d['matkul'] == 3) {
                                                 $matkul = "PBP";
                                             } else {
-                                                $matkul = "Unknown";
+                                                $matkul = "Tidak Diketahui";
                                             }
                                             
                                             echo "<tr>
@@ -132,8 +132,8 @@ $hasil = $db->query($sql);
                                                     <td>$matkul</td>
                                                     <td>
                                                         <a href='./?p=detail-dosen&id=" . $d['id'] . "' class='btn btn-xs btn-info'>Detail</a>
-                                                        <a href='./?p=edit-mhs&id=" . $d['id'] . "' class='btn btn-xs btn-warning'>Edit</a>
-                                                        <a href='./?p=hapus-mhs&id=" . $d['id'] . "' 
+                                                        <a href='./?p=edit-dosen&id=" . $d['id'] . "' class='btn btn-xs btn-warning'>Edit</a>
+                                                        <a href='./?p=hapus-dosen&id=" . $d['id'] . "' 
                                                            class='btn btn-xs btn-danger'
                                                            onclick=\"return confirm('Apakah data akan dihapus?')\">Hapus</a>
                                                     </td>

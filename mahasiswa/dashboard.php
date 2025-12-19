@@ -6,13 +6,13 @@
             <!--begin::Row-->
             <div class="row">
               <!--begin::Col-->
-              <div class="col-sm-6"><h3 class="mb-0">Dashboard Admin</h3></div>
+              <div class="col-sm-6"><h3 class="mb-0">Dashboard Mahasiswa</h3></div>
               <!--end::Col-->
               <!--begin::Col-->
               <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-end">
                   <li class="breadcrumb-item"><a href="#">Home</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Dashboard Admin</li>
+                  <li class="breadcrumb-item active" aria-current="page">Dashboard Mahasiswa</li>
                 </ol>
               </div>
               <!--end::Col-->
@@ -35,7 +35,7 @@
                   <!--begin::Card Header-->
                   <div class="card-header">
                     <!--begin::Card Title-->
-                    <h3 class="card-title">Selamat Datang Di Dashboard Admin!</h3>
+                    <h3 class="card-title">Selamat Datang Di Dashboard Mahasiswa!</h3>
                     <!--end::Card Title-->
                     <!--begin::Card Toolbar-->
                     <div class="card-tools">

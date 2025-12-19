@@ -229,7 +229,7 @@ if($_SESSION['isLogin']==false or $_SESSION['level']!="mhs"){
                   class="user-image rounded-circle shadow"
                   alt="User Image"
                 />
-                <span class="d-none d-md-inline">Admin</span>
+                <span class="d-none d-md-inline">Mahasiswa</span>
               </a>
               <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
                 <!--begin::User Image-->
@@ -251,7 +251,7 @@ if($_SESSION['isLogin']==false or $_SESSION['level']!="mhs"){
                 <!--begin::Menu Footer-->
                 <li class="user-footer">
                   <a href="#" class="btn btn-default btn-flat">Profile</a>
-                  <a href="#" class="btn btn-default btn-flat float-end">Sign out</a>
+                  <a href="./logout" class="btn btn-default btn-flat float-end">Sign out</a>
                 </li>
                 <!--end::Menu Footer-->
               </ul>
